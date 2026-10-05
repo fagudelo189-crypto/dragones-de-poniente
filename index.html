@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dragones de Poniente — Guía de los dragones de Canción de Hielo y Fuego</title>
+<meta name="description" content="Wiki visual sobre los dragones de Canción de Hielo y Fuego: fichas de Drogon, Rhaegal, Viserion, Balerion, Vermithor y Syrax, cronología de la Casa Targaryen y galería ilustrada.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Spectral:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#129409;</text></svg>">
+</head>
+<body>
+
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="ic-dragon" viewBox="0 0 100 100">
+      <path d="M50 8c3 0 5 3 4 6l-2 5c9-2 17 1 22 8l6-6c2-2 5-1 5 2l-1 6c9 6 15 17 16 29l6 3c2 1 2 4 0 5l-7 3-1 8-6-3-4 9-5-4-3 10-4-6-8 4 3-9-7-1 6-6-4-8c-3-9 0-19 7-25l-3-4-6 2-2-4 5-4-4-3z"/>
+      <circle cx="38" cy="33" r="3" fill="#0b0908"/>
+    </symbol>
+    <symbol id="ic-flame" viewBox="0 0 100 100">
+      <path d="M50 4c6 16 22 24 22 42 0 14-10 26-22 26S28 60 28 46c0-8 4-14 9-19-1 9 2 14 6 17 5 4 7-6 5-14-1-9-2-18 2-26z"/>
+    </symbol>
+    <symbol id="ic-crown" viewBox="0 0 100 100">
+      <path d="M12 78h76l4 12H8zm6-6-6-46 22 18L50 18l16 26 22-18-6 46z"/>
+    </symbol>
+    <symbol id="ic-sword" viewBox="0 0 100 100">
+      <path d="M50 4l10 12v46H40V16zm-4 62h8v20h8v6H36v-6h8z"/>
+    </symbol>
+    <symbol id="ic-shield" viewBox="0 0 100 100">
+      <path d="M50 4l38 12v34c0 22-16 38-38 46-22-8-38-24-38-46V16zm0 12L26 26v24c0 15 10 27 24 34 14-7 24-19 24-34V26z"/>
+    </symbol>
+    <symbol id="ic-eye" viewBox="0 0 100 100">
+      <path d="M50 22C26 22 8 40 4 50c4 10 22 28 46 28s42-18 46-28c-4-10-22-28-46-28zm0 14a14 14 0 110 28 14 14 0 010-28z"/>
+    </symbol>
+    <symbol id="ic-egg" viewBox="0 0 100 100">
+      <path d="M50 6c18 0 32 26 32 48 0 22-14 40-32 40S18 76 18 54C18 32 32 6 50 6z"/>
+    </symbol>
+    <symbol id="ic-snow" viewBox="0 0 100 100">
+      <path d="M50 4l6 20 18-10-6 20 22 2-22 8 14 16-20-4 2 22-14-14-14 14 2-22-20 4 14-16-22-8 22-2-6-20 18 10z"/>
+    </symbol>
+  </defs>
+</svg>
+
+<a class="skip" href="#dragones">Saltar al contenido</a>
+
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a class="brand" href="#inicio">
+      <svg class="brand__mark" viewBox="0 0 100 100" aria-hidden="true"><use href="#ic-dragon"/></svg>
+      <span>Dragones<em>de Poniente</em></span>
+    </a>
+    <nav class="nav__links" id="navLinks" aria-label="Principal">
+      <a href="#inicio">Inicio</a>
+      <a href="#dragones">Dragones</a>
+      <a href="#cronologia">Cronología</a>
+      <a href="#galeria">Galería</a>
+      <a href="#datos">Datos</a>
+    </nav>
+    <div class="nav__actions">
+      <button class="icon-btn" id="themeBtn" type="button" aria-label="Cambiar tema" title="Cambiar tema">
+        <svg viewBox="0 0 100 100" aria-hidden="true"><use href="#ic-flame"/></svg>
+      </button>
+      <button class="icon-btn nav__burger" id="burger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section class="hero" id="inicio">
+  <div class="hero__glow" aria-hidden="true"></div>
+  <div class="wrap hero__inner">
+    <p class="hero__kicker">Canción de Hielo y Fuego · Casa Targaryen</p>
+    <h1 class="hero__title">Dragones<br><span>de Poniente</span></h1>
+    <blockquote class="hero__quote">
+      «El fuego no negocia. Es la única cosa que un Targaryen no puede perder del todo.»
+    </blockquote>
+    <div class="hero__cta">
+      <a class="btn btn--primary" href="#dragones">Explorar las fichas</a>
+      <a class="btn" href="#cronologia">Ver la cronología</a>
+    </div>
+    <p class="hero__hint">Desplázate <span aria-hidden="true">↓</span></p>
+  </div>
+
+  <div class="hero__dragon" aria-hidden="true">
+    <svg viewBox="0 0 420 340" class="dragon">
+      <defs>
+        <linearGradient id="gBody" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#f2853f"/>
+          <stop offset="45%" stop-color="#c0392b"/>
+          <stop offset="100%" stop-color="#4a0f16"/>
+        </linearGradient>
+        <radialGradient id="gFire">
+          <stop offset="0%" stop-color="#fff6cf" stop-opacity=".95"/>
+          <stop offset="45%" stop-color="#f6a02a" stop-opacity=".7"/>
+          <stop offset="100%" stop-color="#e8622a" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <g class="dragon__flame"><circle cx="86" cy="150" r="46" fill="url(#gFire)"/></g>
+      <g class="dragon__wings">
+        <path class="wing wing--far" d="M198 186C150 128 108 84 34 62c30 52 70 84 92 112-32-8-66 2-88 30 60-6 112 4 152-8z"/>
+        <path class="wing wing--near" d="M212 178c44-70 116-114 186-128-30 64-80 104-108 124 40-10 78 8 98 44-70-10-128-4-176-12z"/>
+      </g>
+      <g class="dragon__body" fill="url(#gBody)">
+        <path class="tail" d="M280 226c58 12 96 52 110 96" fill="none" stroke="url(#gBody)" stroke-width="11" stroke-linecap="round"/>
+        <path d="M150 198c10-30 100-40 130-8 20 20 10 55-30 68-40 12-90-8-100-28-4-10-4-22 0-32z"/>
+        <path d="M162 194c-40-6-64-30-72-56-6-20 8-40 30-44 14-2 28 5 32 17 10-6 26-4 32 8 6 12 0 26-14 30 8 18 8 34 0 48z"/>
+        <path class="horn" d="M120 100l-8-16 18 8zM136 96l4-18 8 16z"/>
+        <path class="leg" d="M190 252l-12 40-22 10M252 252l10 40 22 8" fill="none" stroke="url(#gBody)" stroke-width="9" stroke-linecap="round"/>
+      </g>
+      <circle class="dragon__eye" cx="128" cy="146" r="4.5" fill="#ffd98a"/>
+    </svg>
+  </div>
+</section>
+
+<section class="section" id="dragones">
+  <div class="wrap">
+    <header class="section__head">
+      <p class="section__kicker">Bestiario</p>
+      <h2 class="section__title">Fichas de dragones</h2>
+      <p class="section__lead">Los dragones que la historia recuerda no fueron bestias salvajes, sino armas con alas. Estos son los que cambiaron el rumbo de Poniente.</p>
+    </header>
+
+    <div class="toolbar">
+      <div class="filters" role="group" aria-label="Filtrar dragones">
+        <button class="chip is-active" data-filter="all" type="button">Todos</button>
+        <button class="chip" data-filter="targaryen" type="button">Targaryen</button>
+        <button class="chip" data-filter="hermanos" type="button">Hermanos de Daenerys</button>
+        <button class="chip" data-filter="antiguo" type="button">Edad Antigua</button>
+      </div>
+      <label class="search">
+        <svg viewBox="0 0 100 100" aria-hidden="true"><use href="#ic-eye"/></svg>
+        <input type="search" id="search" placeholder="Buscar por nombre, jinete o color…" aria-label="Buscar dragones">
+      </label>
+    </div>
+
+    <p class="toolbar__status" id="status" role="status" aria-live="polite">6 dragones</p>
+
+    <ul class="cards" id="cards">
+      <li class="card" data-casa="targaryen" data-era="hermanos" data-color="Negro con alas rojas" data-jinete="Daenerys Targaryen" data-keywords="drogon daenerys targaryen negro rojo grande fuego agua">
+        <div class="card__art card__art--drogon" aria-hidden="true">
+          <svg viewBox="0 0 100 100"><use href="#ic-dragon"/></svg>
+        </div>
+        <div class="card__body">
+          <h3>Drogon</h3>
+          <p class="card__tag">El Negro y Feroz</p>
+          <dl class="card__data">
+            <div><dt>Jinete</dt><dd>Daenerys Targaryen</dd></div>
+            <div><dt>Casa</dt><dd>Targaryen</dd></div>
+            <div><dt>Color</dt><dd>Negro con alas rojas</dd></div>
+            <div><dt>Tamaño</dt><dd>El mayor de los tres</dd></div>
+          </dl>
+          <p class="card__text">El más grande y el más terco de los tres. El fuego de otros dragones se apaga con arena; el de Drogon arde con un calor que no respeta el agua. Desembarcó en Poniente siendo una cría y terminó siendo el terror de los muros de Desembarco del Rey.</p>
+          <p class="card__note">Su nombre honró a Drogo, el khalasar que Daenerys enfrentó como a un igual.</p>
+        </div>
+      </li>
+
+      <li class="card" data-casa="targaryen" data-era="hermanos" data-color="Verde esmeralda" data-jinete="Daenerys Targaryen" data-keywords="rhaegal daenerys targaryen verde esmeralda rapido vuelo aegon rhaegar">
+        <div class="card__art card__art--rhaegal" aria-hidden="true">
+          <svg viewBox="0 0 100 100"><use href="#ic-dragon"/></svg>
+        </div>
+        <div class="card__body">
+          <h3>Rhaegal</h3>
+          <p class="card__tag">El Verde y Veloz</p>
+          <dl class="card__data">
+            <div><dt>Jinete</dt><dd>Daenerys Targaryen</dd></div>
+            <div><dt>Casa</dt><dd>Targaryen</dd></div>
+            <div><dt>Color</dt><dd>Verde esmeralda</dd></div>
+            <div><dt>Notable</dt><dd>El más rápido en vuelo</dd></div>
+          </dl>
+          <p class="card__text">Rhaegal era el más ágil de los tres: cubría en pocos aleteos distancias que otros dragones tardaban en cruzar. Murió sobre el Mar de Sangre y con él murió buena parte del ejército de Daenerys.</p>
+          <p class="card__note">Recibe su nombre en honor a Aegon el Conquistador, el antepasado que unificó Poniente.</p>
+        </div>
+      </li>
+
+      <li class="card" data-casa="targaryen" data-era="hermanos" data-color="Blanco y rosado" data-jinete="Daenerys Targaryen" data-keywords="viserion daenerys targaryen blanco rosado euron greyjoy esperanza flota">
+        <div class="card__art card__art--viserion" aria-hidden="true">
+          <svg viewBox="0 0 100 100"><use href="#ic-dragon"/></svg>
+        </div>
+        <div class="card__body">
+          <h3>Viserion</h3>
+          <p class="card__tag">El Blanco</p>
+          <dl class="card__data">
+            <div><dt>Jinete</dt><dd>Daenerys Targaryen</dd></div>
+            <div><dt>Casa</dt><dd>Targaryen</dd></div>
+            <div><dt>Color</dt><dd>Blanco y rosado</dd></div>
+            <div><dt>Nota</dt><dd>El último en volar</dd></div>
+          </dl>
+          <p class="card__text">El más pequeño de los tres y, aun así, el que llegó más lejos: en la Batalla de Buena Esperanza ardió la flota de Euron Greyjoy en un solo aliento. Murió de esa misma herida, en manos de su jinete.</p>
+          <p class="card__note"><strong>Libros y serie:</strong> en la novela, Viserion se hiere enfrentándose a los Tyrrell y se recupera; es en la adaptación de televisión donde cobra la flota. Esta ficha describe la versión de la serie.</p>
+        </div>
+      </li>
+
+      <li class="card" data-casa="targaryen" data-era="antiguo" data-color="Negro" data-jinete="Daenys Targaryen" data-keywords="balerion daenys targaryen negro valyria maldicion calavera fortaleza roja vhagar meraxes">
+        <div class="card__art card__art--balerion" aria-hidden="true">
+          <svg viewBox="0 0 100 100"><use href="#ic-dragon"/></svg>
+        </div>
+        <div class="card__body">
+          <h3>Balerion</h3>
+          <p class="card__tag">La Peste Negra</p>
+          <dl class="card__data">
+            <div><dt>Jinete</dt><dd>Daenys Targaryen</dd></div>
+            <div><dt>Casa</dt><dd>Targaryen</dd></div>
+            <div><dt>Color</dt><dd>Negro</dd></div>
+            <div><dt>Tamaño</dt><dd>El mayor de todos los tiempos</dd></div>
+          </dl>
+          <p class="card__text">El dragón más grande jamás montado por un mortal: su sombra oscurecía campos de cultivo enteros. Murió durante la Maldición de Valyria y su calavera acabó en el salón del trono de la Fortaleza Roja, como trofeo y como advertencia.</p>
+          <p class="card__note">De él descienden casi todos los dragones modernos, y por eso su calavera fue siempre un objeto codiciado por la Casa Targaryen.</p>
+        </div>
+      </li>
+
+      <li class="card" data-casa="corona" data-era="antiguo" data-color="Verde y dorado" data-jinete="Aegon el Conquistador" data-keywords="vermithor quemador aegon conquistador harrenhal cadena torre roja">
+        <div class="card__art card__art--vermithor" aria-hidden="true">
+          <svg viewBox="0 0 100 100"><use href="#ic-dragon"/></svg>
+        </div>
+        <div class="card__body">
+          <h3>Vermithor</h3>
+          <p class="card__tag">El Quemador</p>
+          <dl class="card__data">
+            <div><dt>Jinete</dt><dd>Aegon el Conquistador</dd></div>
+            <div><dt>Casa</dt><dd>Servía a la Corona Targaryen</dd></div>
+            <div><dt>Color</dt><dd>Verde y dorado</dd></div>
+            <div><dt>Alias</dt><dd>El Quemador</dd></div>
+          </dl>
+          <p class="card__text">Dormía encadenado bajo la Fortaleza Roja cuando Aegon el Conquistador lo despertó y lo montó. Su aliento acharró Harrenhal de cima a base durante el saqueo: el primer uso del fuego Targaryen como arma de Estado.</p>
+          <p class="card__note">Fue el último de los dragones de la Edad Antigua en ser montado por un jinete; después de él, los nuevos dragones dejaron de aparecer salvajes.</p>
+        </div>
+      </li>
+
+      <li class="card" data-casa="targaryen" data-era="antiguo" data-color="Ocre y dorado" data-jinete="Daemon Targaryen" data-keywords="syrax daemon targaryen harrenhal nido huevos septa madre drogon rhaegal viserion">
+        <div class="card__art card__art--syrax" aria-hidden="true">
+          <svg viewBox="0 0 100 100"><use href="#ic-dragon"/></svg>
+        </div>
+        <div class="card__body">
+          <h3>Syrax</h3>
+          <p class="card__tag">La Madre de los Tres</p>
+          <dl class="card__data">
+            <div><dt>Jinete</dt><dd>Daemon Targaryen</dd></div>
+            <div><dt>Casa</dt><dd>Targaryen</dd></div>
+            <div><dt>Color</dt><dd>Ocre y dorado</dd></div>
+            <div><dt>Crías</dt><dd>Drogon, Rhaegal, Viserion</dd></div>
+          </dl>
+          <p class="card__text">La dragona que puso huevos en la Fortaleza de Harrenhal, en un nido construido a escondidas. Fue ella quien atacó la gran septa de la ciudad mientras era saqueada: una furia que Daenerys repetiría siglos después con sus tres dragones.</p>
+          <p class="card__note"><strong>Libros y serie:</strong> en la novela, Syrax quema el interior de la gran septa de Harrenhal y huye; en la serie, el castillo entero arde.</p>
+        </div>
+      </li>
+    </ul>
+
+    <p class="empty" id="empty" hidden>Ningún dragón coincide con tu búsqueda.</p>
+  </div>
+</section>
+
+<section class="section section--alt" id="cronologia">
+  <div class="wrap">
+    <header class="section__head">
+      <p class="section__kicker">Línea de tiempo</p>
+      <h2 class="section__title">Cronología del fuego</h2>
+      <p class="section__lead">Ocho momentos que explican cómo una familia exiliada de Valyria pasó a gobernar Poniente, y por qué todo el mundo recuerda cómo termina.</p>
+    </header>
+
+    <ol class="timeline">
+      <li class="tl reveal">
+        <span class="tl__date">Antes de 114 a. C.</span>
+        <h3 class="tl__title">La huida de Valyria</h3>
+        <p>La Casa Targaryen, sabiendo que la ruina de las Catorce Ciudades se acerca, toma el camino de Rocadragón. Se llevan sus huevos y sus dragones, y dejan atrás un hogar que arderá para siempre.</p>
+      </li>
+      <li class="tl reveal">
+        <span class="tl__date">114 a. C.</span>
+        <h3 class="tl__title">La Maldición de Valyria</h3>
+        <p>El Vertido de la Montaña Profunda cubre de fuego la ciudad y las Catorce Ciudades. Ningún dragón Targaryen muere en la catástrofe: sobreviven volando sobre el mar hasta su isla volcánica.</p>
+      </li>
+      <li class="tl reveal">
+        <span class="tl__date">~2 a. C.</span>
+        <h3 class="tl__title">El Desembarco del Rey</h3>
+        <p>Aegon Targaryen ve a Balerion, Vhagar y Meraxes sobre la isla y decide que aquel trozo de roca merece ser suyo. Construye una torre de madera, la Torre de la Alegría, y cruza el mar. Comienza la conquista.</p>
+      </li>
+      <li class="tl reveal">
+        <span class="tl__date">~1 a. C.</span>
+        <h3 class="tl__title">El despertar del Quemador</h3>
+        <p>Aegon despierta a Vermithor de sus cadenas bajo la Fortaleza Roja. Sólo unos meses después, Harrenhal es arrasada por su aliento: el primer uso del fuego Targaryen como arma de Estado.</p>
+      </li>
+      <li class="tl reveal">
+        <span class="tl__date">1 d. C.</span>
+        <h3 class="tl__title">Poniente unificada</h3>
+        <p>En diecisiete años de guerras, Aegon el Conquistador somete a los Siete Reinos y se corona en Desembarco del Rey. Empieza la dinastía Targaryen: ciento setenta años de regla Targaryen sobre Poniente.</p>
+      </li>
+      <li class="tl reveal">
+        <span class="tl__date">41 d. C.</span>
+        <h3 class="tl__title">La Danza de los Dragones</h3>
+        <p>Por primera vez los dragones vuelan contra dragones: la Casa de la Sangre del Viejo y la rama de Aegon el Indigno libran una guerra civil que acaba con casi todas las bestias de Poniente muertas.</p>
+      </li>
+      <li class="tl reveal">
+        <span class="tl__date">~114 d. C.</span>
+        <h3 class="tl__title">La huida de Daenerys</h3>
+        <p>Tras la ejecución de su hermano Viserys, Daenerys cruza el mar con tres huevos. Eclosionan Drogon, Rhaegal y Viserion, y el mundo descubre que la Targaryen no había muerto: sólo estaba esperando.</p>
+      </li>
+      <li class="tl reveal">
+        <span class="tl__date">~115 d. C.</span>
+        <h3 class="tl__title">Buena Esperanza</h3>
+        <p>Daenerys regresa a Poniente, toma Meereen y después desciende sobre Desembarco del Rey. En el estrecho de Buena Esperanza, sus tres dragones borran la flota de Euron Greyjoy en cuestión de minutos.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="section" id="galeria">
+  <div class="wrap">
+    <header class="section__head">
+      <p class="section__kicker">Galería</p>
+      <h2 class="section__title">Escenas del mundo Targaryen</h2>
+      <p class="section__lead">Ilustraciones vectoriales originales. Haz clic en cualquier escena para verla en grande.</p>
+    </header>
+
+    <ul class="gallery" id="gallery">
+      <li class="art reveal" tabindex="0" data-scene="valyria" data-caption="La Maldición de Valyria: el día que el fuego llegó a las Catorce Ciudades.">
+        <div class="art__scene art__scene--valyria" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#ic-flame"/></svg></div>
+        <p class="art__title">Valyria en llamas</p>
+      </li>
+      <li class="art reveal" tabindex="0" data-scene="desembarco" data-caption="Desembarco del Rey: la Torre de la Alegría frente a la llegada de Aegon.">
+        <div class="art__scene art__scene--desembarco" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#ic-crown"/></svg></div>
+        <p class="art__title">El Desembarco del Rey</p>
+      </li>
+      <li class="art reveal" tabindex="0" data-scene="roca" data-caption="Rocadragón: la montaña donde los dragones se instalaron después del exilio.">
+        <div class="art__scene art__scene--roca" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#ic-dragon"/></svg></div>
+        <p class="art__title">Rocadragón</p>
+      </li>
+      <li class="art reveal" tabindex="0" data-scene="danza" data-caption="La Danza de los Dragones: dos bandos, dos dragones, una sola guerra.">
+        <div class="art__scene art__scene--danza" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#ic-sword"/></svg></div>
+        <p class="art__title">La Danza de los Dragones</p>
+      </li>
+      <li class="art reveal" tabindex="0" data-scene="norte" data-caption="El Norte bajo la primera nevada del año, lejos del fuego dragónico.">
+        <div class="art__scene art__scene--norte" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#ic-snow"/></svg></div>
+        <p class="art__title">El Invierno del Norte</p>
+      </li>
+      <li class="art reveal" tabindex="0" data-scene="harrenhal" data-caption="Harrenhal: la fortaleza que Vermithor y Syrax redujeron a cenizas.">
+        <div class="art__scene art__scene--harrenhal" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#ic-shield"/></svg></div>
+        <p class="art__title">Harrenhal</p>
+      </li>
+      <li class="art reveal" tabindex="0" data-scene="huevo" data-caption="Los huevos de Drogon, Rhaegal y Viserion, escondidos entre las dunas del Desierto Rojo.">
+        <div class="art__scene art__scene--huevo" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#ic-egg"/></svg></div>
+        <p class="art__title">Los huevos del desierto</p>
+      </li>
+      <li class="art reveal" tabindex="0" data-scene="esperanza" data-caption="Buena Esperanza: el estrecho donde ardió la Armada de Hierro.">
+        <div class="art__scene art__scene--esperanza" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#ic-eye"/></svg></div>
+        <p class="art__title">Buena Esperanza</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="section section--stats" id="datos">
+  <div class="wrap">
+    <header class="section__head">
+      <p class="section__kicker">En números</p>
+      <h2 class="section__title">Poniente en cifras</h2>
+    </header>
+    <ul class="stats">
+      <li class="stat"><span class="stat__num" data-to="3">0</span><span class="stat__label">Dragones de Daenerys Targaryen</span></li>
+      <li class="stat"><span class="stat__num" data-to="170">0</span><span class="stat__label">Años de dominio Targaryen</span></li>
+      <li class="stat"><span class="stat__num" data-to="17">0</span><span class="stat__label">Años para unificar Poniente</span></li>
+      <li class="stat"><span class="stat__num" data-to="6">0</span><span class="stat__label">Dragones destacados aquí</span></li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <p><strong>Dragones de Poniente</strong> — sitio de fans sobre <em>Canción de Hielo y Fuego</em> y <em>Casa del Dragón</em>.</p>
+    <p class="footer__legal">Personajes y mundo © George R. R. Martin / HBO. Proyecto educativo sin ánimo de lucro.</p>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" hidden>
+  <button class="lightbox__close" id="lbClose" type="button" aria-label="Cerrar">×</button>
+  <button class="lightbox__nav lightbox__nav--prev" id="lbPrev" type="button" aria-label="Anterior">‹</button>
+  <div class="lightbox__inner">
+    <div class="lightbox__art" id="lbArt" aria-hidden="true"></div>
+    <p class="lightbox__caption" id="lbCaption"></p>
+  </div>
+  <button class="lightbox__nav lightbox__nav--next" id="lbNext" type="button" aria-label="Siguiente">›</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
