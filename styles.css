@@ -279,12 +279,26 @@ a { color: inherit; }
 .card__art svg { width: 96px; height: 96px; fill: rgba(255, 255, 255, .16); position: relative; z-index: 1; transition: transform .5s var(--ease); }
 .card:hover .card__art svg { transform: scale(1.14) rotate(-4deg); }
 
+.card__art img {
+  width: 100%; height: 100%; object-fit: cover; object-position: center 35%;
+  transition: transform .55s var(--ease);
+}
+.card:hover .card__art img { transform: scale(1.07); }
+
 .card__art--drogon { background: linear-gradient(160deg, #2b0f12, #6b1414 60%, #c0392b); }
 .card__art--rhaegal { background: linear-gradient(160deg, #0d241a, #14603a 60%, #2f9e5f); }
 .card__art--viserion { background: linear-gradient(160deg, #23252b, #6d7180 60%, #d8dbe2); }
 .card__art--balerion { background: linear-gradient(160deg, #101014, #3a2a30 60%, #6b5a3a); }
 .card__art--vermithor { background: linear-gradient(160deg, #16240f, #4b6b1a 60%, #c9a227); }
 .card__art--syrax { background: linear-gradient(160deg, #2a1e0c, #8a6a1e 60%, #e3c15a); }
+.card__art--daenerys { background: linear-gradient(160deg, #2b0f12, #6b1414 60%, #c0392b); }
+.card__art--jon { background: linear-gradient(160deg, #101c26, #2f5568 60%, #bcd9e6); }
+.card__art--tyrion { background: linear-gradient(160deg, #3a1c0c, #a4561e 60%, #f0d08a); }
+.card__art--aegon { background: linear-gradient(160deg, #1a1424, #4a2f5e 60%, #d9a441); }
+.card__art--rhaenyra { background: linear-gradient(160deg, #2b0f2b, #6b1440 60%, #c0395e); }
+.card__art--daemon { background: linear-gradient(160deg, #2b0f12, #7a1c2c 60%, #c0392b); }
+.card__art--jorah { background: linear-gradient(160deg, #14241a, #1f5c3a 60%, #6fae8a); }
+.card__art--viserys { background: linear-gradient(160deg, #161a24, #42466b 60%, #a9a9c9); }
 
 .card__body { padding: 1.5rem 1.5rem 1.7rem; display: flex; flex-direction: column; gap: .85rem; flex: 1; }
 .card__body h3 { font-size: 1.55rem; margin: 0; }
@@ -357,6 +371,13 @@ a { color: inherit; }
 }
 .art__scene svg { width: 44%; height: auto; fill: rgba(255, 255, 255, .22); z-index: 1; transition: transform .5s var(--ease); }
 .art:hover .art__scene svg { transform: scale(1.12); }
+
+.art__scene img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%; object-fit: cover; object-position: center;
+  transition: transform .55s var(--ease);
+}
+.art:hover .art__scene img { transform: scale(1.07); }
 .art__scene::before {
   content: ""; position: absolute; inset: 0;
   background: repeating-linear-gradient(115deg, rgba(255, 255, 255, .05) 0 2px, transparent 2px 9px);
@@ -374,7 +395,7 @@ a { color: inherit; }
 .art__scene--norte { background: linear-gradient(150deg, #101c26, #2f5568 55%, #bcd9e6); }
 .art__scene--harrenhal { background: linear-gradient(150deg, #241a12, #5c3a20 55%, #b07a3a); }
 .art__scene--huevo { background: linear-gradient(150deg, #3b2a10, #9c7a2c 55%, #e8d59a); }
-.art__scene--esperanza { background: linear-gradient(150deg, #0d2233, #1d5f7a 55%, #6fd0e8); }
+.art__scene--larganoche { background: linear-gradient(150deg, #050a12, #1c2a45 55%, #5a7d9c); }
 
 .art__title {
   margin: 0; padding: .85rem 1rem; border-top: 1px solid var(--border);
@@ -429,9 +450,11 @@ a { color: inherit; }
   width: min(88vw, 760px); aspect-ratio: 4 / 3; border-radius: var(--radius);
   border: 1px solid var(--border); display: grid; place-items: center;
   box-shadow: 0 30px 80px rgba(0, 0, 0, .7); animation: zoom .3s var(--ease);
+  position: relative; overflow: hidden;
 }
 @keyframes zoom { from { transform: scale(.92); opacity: 0; } to { transform: scale(1); opacity: 1; } }
 .lightbox__art svg { width: 40%; fill: rgba(255, 255, 255, .26); }
+.lightbox__art img { width: 100%; height: 100%; object-fit: contain; background: #0b0908; }
 .lightbox__caption { margin: 0; max-width: 60ch; text-align: center; color: #e8ddd0; font-size: .98rem; font-style: italic; }
 
 .lightbox__close, .lightbox__nav {

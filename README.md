@@ -6,6 +6,7 @@ Sitio web de fans sobre los dragones de *Canción de Hielo y Fuego* y *Casa del 
 
 - **Portada** con dragón SVG animado
 - **6 fichas**: Drogon, Rhaegal, Viserion, Balerion, Vermithor y Syrax
+- **8 fichas de personajes**: Daenerys, Jon, Tyrion, Aegon, Rhaenyra, Daemon, Jorah y Viserys
 - **Cronología** de 8 hitos de la Casa Targaryen
 - **Galería** de 8 escenas vectoriales con lightbox
 - **Contadores** animados y tema claro/oscuro

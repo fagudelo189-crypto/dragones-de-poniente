@@ -52,55 +52,62 @@ const spy = new IntersectionObserver(entries => {
 
 sections.forEach(s => spy.observe(s));
 
-/* ---------- FILTROS Y BÚSQUEDA ---------- */
-
-const cards = $$("#cards .card");
-const chips = $$(".chip");
-const search = $("#search");
-const status = $("#status");
-const empty = $("#empty");
-
-let activeFilter = "all";
+/* ---------- FILTROS Y BÚSQUEDA (por sección) ---------- */
 
 const normalize = s => s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 
-const cardHaystack = card => normalize([
-  card.querySelector("h3").textContent,
-  card.querySelector(".card__tag").textContent,
-  card.dataset.jinete,
-  card.dataset.color,
-  card.dataset.casa,
-  card.dataset.keywords,
-  card.textContent,
-].join(" "));
+function setupFilters(scope, config) {
+  const cards = $$(".card", scope);
+  const chips = $$(".chip", scope);
+  const search = $(".search input", scope);
+  const status = $(".toolbar__status", scope);
+  const empty = $(".empty", scope);
+  let activeFilter = "all";
 
-function applyFilters() {
-  const term = normalize(search.value.trim());
-  let visible = 0;
+  const haystack = card => normalize([
+    card.querySelector("h3").textContent,
+    card.querySelector(".card__tag").textContent,
+    card.dataset.jinete,
+    card.dataset.color,
+    card.dataset.casa,
+    card.dataset.keywords,
+    card.textContent,
+  ].join(" "));
 
-  cards.forEach(card => {
-    const matchesFilter = activeFilter === "all" || card.dataset.era === activeFilter;
-    const matchesTerm = !term || cardHaystack(card).includes(term);
-    const show = matchesFilter && matchesTerm;
-    card.classList.toggle("is-hidden", !show);
-    if (show) visible++;
+  const word = n => n === 1 ? `1 ${config.word}` : `${n} ${config.plural}`;
+
+  function apply() {
+    const term = normalize(search.value.trim());
+    let visible = 0;
+
+    cards.forEach(card => {
+      const matchesFilter = activeFilter === "all" ||
+        (config.match === "era" ? card.dataset.era === activeFilter : card.dataset.casa === activeFilter);
+      const matchesTerm = !term || haystack(card).includes(term);
+      const show = matchesFilter && matchesTerm;
+      card.classList.toggle("is-hidden", !show);
+      if (show) visible++;
+    });
+
+    empty.hidden = visible > 0;
+    status.textContent = word(visible);
+  }
+
+  chips.forEach(chip => {
+    chip.addEventListener("click", () => {
+      chips.forEach(c => c.classList.remove("is-active"));
+      chip.classList.add("is-active");
+      activeFilter = chip.dataset.filter;
+      apply();
+    });
   });
 
-  empty.hidden = visible > 0;
-  status.textContent = visible === 1 ? "1 dragón" : `${visible} dragones`;
+  search.addEventListener("input", apply);
+  apply();
 }
 
-chips.forEach(chip => {
-  chip.addEventListener("click", () => {
-    chips.forEach(c => c.classList.remove("is-active"));
-    chip.classList.add("is-active");
-    activeFilter = chip.dataset.filter;
-    applyFilters();
-  });
-});
-
-search.addEventListener("input", applyFilters);
-applyFilters();
+setupFilters($("#dragones"), { match: "era", word: "dragón", plural: "dragones" });
+setupFilters($("#personajes"), { match: "casa", word: "personaje", plural: "personajes" });
 
 /* ---------- REVEAL AL HACER SCROLL ---------- */
 
@@ -177,8 +184,9 @@ let lastFocused = null;
 function render(index) {
   current = (index + artworks.length) % artworks.length;
   const item = artworks[current];
-  lbArt.className = `art__scene art__scene--${item.dataset.scene}`;
-  lbArt.innerHTML = item.querySelector("svg").outerHTML;
+  lbArt.className = `lightbox__art art__scene art__scene--${item.dataset.scene}`;
+  const media = item.querySelector("img") || item.querySelector("svg");
+  lbArt.innerHTML = media.outerHTML;
   lbCaption.textContent = `${item.querySelector(".art__title").textContent} — ${item.dataset.caption}`;
 }
 
